@@ -1,12 +1,23 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <Navigation/>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
     </div>
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
+
+<script>
+import Navigation from "@/components/Navigation";
+export default {
+  components:{
+    Navigation
+  }
+  
+}
+</script>
 
 <style>
 #app {
