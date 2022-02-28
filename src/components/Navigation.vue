@@ -1,47 +1,61 @@
 <template>
-<!-- 1st nav
-    <nav class="navbar navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-       <router-link to="/">Home</router-link>
-          </li>
-          <li class="nav-item">
-      <router-link to="/about">About</router-link>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+<!-- 1st nav -->
+
+   <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="home+logo"></div>
+      <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+<img class="logo" style="border:1px solid; border-radius:10px; float:left;" height="50px" width="50px"    src="../assets/flyshoes.png">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li style="padding-right:100px;">
+              <router-link   to="/" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
+                Products
+              </router-link>
+            </li>
+            <li style="padding-right:100px;">
+              <router-link   to="/" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
+                Home
+              </router-link>
+            </li>
+            
+            <li text-start>
+              <router-link style="padding-right:00px;font-size: 2rem; " to="/" class="nav-link text-start text-warning">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
+                 <em> FLY SHOES </em>
+            </router-link>
+            </li>
+ <!-- <li>
+                <router-link to="/about" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#speedometer2"/></svg>
+                About
+             </router-link>
+            </li>       -->
+            
+                <!-- <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li> -->
+
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
         </form>
+
+        <div class="text-end">
+         <div class="text-end">
+         <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
+         <router-link to="/sign-up"> <button type="button" class="btn btn-warning">Sign-up</button> </router-link>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
-</nav> -->
-<!-- 1st nav -->
+  </header>   
+
+ <!-- 1st nav -->
+<!--  
 <header>
     <div class="px-3 py-2 bg-dark text-white">
       <div class="container">
@@ -51,46 +65,51 @@
           </a>
 
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+
             <li text-start>
-              <router-link style="padding-right:800px;font-size: 2rem; " to="/" class="nav-link text-start text-white">
+              <img style="border:1px solid; border-radius:20px; " width="100" height="100px" src="@/assets/Flyshoes.png" alt="">
+            </li>
+
+            <li text-start>
+              <router-link style="padding-right:00px;font-size: 2rem; " to="/" class="nav-link text-start text-primary">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
                 FLY SHOES
             </router-link>
             </li>
+
+
+
+
+            <li>
+              <router-link href="#" to="/" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
+                Home
+              </router-link>
+            </li>
+
+
             <li>
                 <router-link to="/about" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#speedometer2"/></svg>
                 About
              </router-link>
             </li>
+
+           
             <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#table"/></svg>
-                Clothing
-              </a>
+               
             </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#grid"/></svg>
-                Sneakers
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#people-circle"/></svg>
-                Customers
-              </a>
-            </li>
-             <!-- <div class="text-end">
-          <button type="button" class="btn btn-light text-dark me-2">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
-        </div> -->
+            
+             <div class="text-end">
+         <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
+         <router-link to="/sign-up"> <button type="button" class="btn btn-primary">Sign-up</button> </router-link>
+        </div>
           </ul>
         </div>
       </div>
     </div>
   
-  </header>
+  </header> -->
 </template>
 
 <script>
@@ -100,6 +119,10 @@ export default {
 </script>
 
 <style scoped>
-
+#logo{
+position:relative;
+top:0;
+left:0;
+}
 
 </style>

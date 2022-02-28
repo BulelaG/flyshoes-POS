@@ -1,47 +1,112 @@
 <template>
   <div class="landing">
+<!-- hero message -->
 
-
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">Step Fly</h1>
-    <div class="col-lg-6 mx-auto">
+<div class="px-4 pt- my- text-center border-bottom">
+    <h1 class="display-3 fw-bold">Step Fly</h1>
+       <em> <h3 class="display-4 text-warning fw-bold">Kick it with us</h3></em>
+<br>
+    <!-- <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Shop with us and take fly steps towards your destiny.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Log in</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Sign-up</button>
+        <button style="border:1px solid; border-radius:40px;" type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Log in</button>
+        <button   style="border:1px solid; border-radius:40px;" type="button" class="btn btn-outline-warning btn-lg px-4">Sign-up</button>
       </div>
-    </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
-    </div>
+    </div> -->
+   
   </div>
 
-  <div class="b-example-divider"></div>
+<br><br>
 
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+<!-- hero message -->
+
+
+<!-- promo carousels -->
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="@/assets/A Ma Maniere x Nike Air Jordan 3.jpg" alt="Los Angeles" width="300" height="100">
+      <div class="carousel-caption">
+        <h3></h3>
       </div>
-    
+    <p class="text-success ">A Ma Maniere x Nike Air Jordan 3</p>
+<br>
+    </div>
+    <div class="carousel-item">
+      <img src="@/assets/COMME des GARÇONS x Nike Air Foamposite.jpg" alt="Chicago" width="300" height="100">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div> 
+   <p class="text-success "  >COMME des GARÇONS x Nike Air Foamposite</p>
+
+      <br>  
+    </div>
+    <div class="carousel-item">
+      <img src="@/assets/Patta x Nike Air Max 1.jpg" alt="New York" width="300" height="100">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div> 
+               <p class="text-success "  >Patta x Nike Air Max 1</p>
+      <br> 
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<br><br>
+
+
+ <!-- end of promo carousels -->
+
+
+  
+  
   </div>
-  </div>
+<!--landi promo -->
+
+  
 </template>
 
 <script>
+
+
 export default {
   name: "Landing",
   props: {
     msg: String,
   },
 };
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
+/* carousels styling */
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    object-fit:cover;
+    border-radius:20px;
+    width: 500px;
+    height: 300px;
+  }
+
+
+
 h3 {
   margin: 40px 0 0;
 }
