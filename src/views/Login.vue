@@ -70,7 +70,7 @@ export default {
 }
 .neu-border-inset {
   border-radius: 30px;
-  background: #f5f5f5;
+  background: #747171;
   box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
 }
 

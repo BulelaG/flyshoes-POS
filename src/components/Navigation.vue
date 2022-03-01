@@ -10,13 +10,13 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li style="padding-right:100px;">
-              <router-link   to="/" class="nav-link text-white">
+            <li style="padding-right:10px;">
+              <router-link   to="/products" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
                 Products
               </router-link>
             </li>
-            <li style="padding-right:100px;">
+            <li style="padding-right:10px;">
               <router-link   to="/" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
                 Home
