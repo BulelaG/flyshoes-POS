@@ -126,6 +126,6 @@ export default {
 }
 .form-social-btn {
   width: 45%;
-  color: #333;
+  color: rgb(255, 190, 190);
 }
 </style>

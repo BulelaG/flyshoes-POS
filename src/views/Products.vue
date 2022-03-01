@@ -53,91 +53,23 @@
             class="col-lg-4 mb-4"
           >
             <div class="card">
-              <img :src="product.image" alt="" class="card-img-top" />
+              <img :src="product.img" alt="" class="card-img-top" />
               <div class="card-body">
                 <br />
                 <h5 class="card-title">{{ product.title }}</h5>
-                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">{{ product.category }}</p>
               </div>
               <div class="card-footer">
-               <!-- github link ----------------------------------------->
-                <button
-                  type="button"
-                  class="btn btn-muted btn-lg px-4 gap-3"
-                  target="_blank"
-                >
-                  <a style="color: rgb(76, 86, 88)" 
-                    ><i
-                      class="bi bi-github"
-                      style="font-size: 1em; padding-bottom: 400px"
-                      >Github link</i
-                    ></a
-                  >
-                </button>
-
-             <!--netlify link ---------------------------------------- -->
-                 <button
-                  type="button"
-                  class="btn btn-muted btn-lg px-4 gap-3"
-                  target="_blank"
-                >
-                  <a style="color: rgb(76, 86, 88)" target="_blank" 
-                    ><i
-                      class="bi bi-github"
-                      style="font-size: 1em; padding-bottom: 400px"
-                      >Netlify link</i
-                    ></a
-                  >
-                </button>
                 <br>
-
-                <small class="text-muted">{{ product.color }}</small>
+                <small class="text-muted">R{{ product.price }}</small>
               </div>
               
               <br>
               <br>
-              <!-- <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-      </div> -->
+              
             </div>
           </div>
-          <!-- <div class="col-lg-4 mb-4">
-  <div class="card">
-      <img src="../assets/NeededFiles/BMI.png" alt="" class="card-img-top">
-       <div class="card-body">
-            <h5 class="card-title">Carousels Practice</h5>
-            <p class="card-text">This is a task where we practised carousels and modals.</p>
-          </div>
-          <div class="card-footer"><button type="button" class="btn btn-muted btn-lg px-4 gap-3">
-            <a style="color: rgb(76, 86, 88);" href="https://github.com/BulelaG/carousels" target="_blank"><i  class="bi bi-github" style="font-size: 2em;padding-bottom: 400px;"></i></a>
-           </button>
-            <small class="text-muted">Last updated a week ago</small>
-          </div>
-     
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="../assets/NeededFiles/carousel.png" alt="" class="card-img-top">
-      <div class="card-body">
-            <h5 class="card-title">Mock Portfolio</h5>
-            <br>
-            <p class="card-text">First ever portfolio created with Html and Css </p>
-            
-          </div>
-          <div class="card-footer">
-            <button type="button" class="btn btn-muted btn-lg px-4 gap-3">
-              <a style="color: rgb(76, 86, 88);" href=" https://github.com/BulelaG" target="_blank"><i  class="bi bi-github" style="font-size: 2em;padding-bottom: 400px;"></i></a>
-             </button>
-            <small class="text-muted">Last updated 3 weeks ago</small>
-          </div>
-
-    
-     </div>
-    </div> -->
+         
         </div>
       </div>
     </section>
@@ -147,6 +79,50 @@
 
 <script >
 export default {
+   data() {
+    return {
+      products: [
+        {
+        title: "Off-White™ x Nike Air Jordan 3",
+        category: "Nike",
+        price: 3500,
+        img: "https://i.postimg.cc/RVwWvkmR/A-Ma-Maniere-x-Nike-Air-Jordan-3.jpg",
+      },
+      {
+        title: "Auralee x New Balance 550",
+        category: "New Balance",
+        price:3090 ,
+        img: "https://i.postimg.cc/m2Wrpm9F/Auralee-x-New-Balance-550.jpg",
+      },
+      {
+        title: "YEEZY Foam Runner",
+        category: "Adidas",
+        price: 4000,
+        img: "https://i.postimg.cc/3RNS2j1L/adidas-YEEZY-Foam-Runner.jpg",
+      },
+      {
+        title: "Kiko Kostadinov ASICS GEL-Quantum Levitrack",
+        category: "Asics",
+        price: 1200,
+        img: "https://i.postimg.cc/XNfGwr1W/Kiko-Kostadinov-ASICS-GEL-Quantum-Levitrack.jpg",
+      },
+      {
+        title: "Patta x Nike Air Max 1",
+        category: "Nike",
+        price: 2589,
+        img: "https://i.postimg.cc/Prz8WCxZ/Patta-x-Nike-Air-Max-1.jpg",
+      },
+      {
+        title: "A Ma Maniere x Nike Air Jordan 2.",
+        category: "Nike",
+        price: 10000,
+        img: "https://i.postimg.cc/CKTnGw49/Off-White-x-Nike-Air-Jordan-2.jpg ",
+      },
+      ],
+    };
+  }
+
+
 
     
 }
@@ -163,9 +139,7 @@ export default {
 }
 
 .card {
-  width: calc(100% / 4);
-  margin-bottom: 10px;
-  margin-right: 5px;
+
 }
 
 </style>
