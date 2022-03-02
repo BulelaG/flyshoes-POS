@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     register() {
-      fetch("https://generic-blog-api.herokuapp.com/users", {
+      fetch("https://arden-first-backend.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify({
           name: this.name,
@@ -73,7 +73,7 @@ export default {
         .then((json) => {
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "Blogs" });
+          this.$router.push({ name: "" });
         })
         .catch((err) => {
           alert(err);

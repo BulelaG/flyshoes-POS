@@ -1,4 +1,8 @@
 <template>
+
+
+
+
    <div>
      <h1>PRODUCTS</h1>
 
@@ -62,6 +66,8 @@
               <div class="card-footer">
                 <br>
                 <small class="text-muted">R{{ product.price }}</small>
+                <br>
+                <h6></h6>
               </div>
               
               <br>
@@ -73,6 +79,7 @@
         </div>
       </div>
     </section>
+    
 
     </div>
 </template>
@@ -83,12 +90,14 @@ export default {
     return {
       products: [
         {
+          id: "1",
         title: "Off-White™ x Nike Air Jordan 3",
         category: "Nike",
         price: 3500,
         img: "https://i.postimg.cc/RVwWvkmR/A-Ma-Maniere-x-Nike-Air-Jordan-3.jpg",
       },
       {
+         id: "1",
         title: "Auralee x New Balance 550",
         category: "New Balance",
         price:3090 ,
@@ -138,8 +147,6 @@ export default {
   object-fit: contain;
 }
 
-.card {
 
-}
 
 </style>

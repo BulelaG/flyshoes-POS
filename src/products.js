@@ -1,43 +1,43 @@
 let products = JSON.parse(localStorage.getItem("products"))
   ? JSON.parse(localStorage.getItem("products"))
   : [
-      {
-        title: "Off-White™ x Nike Air Jordan 2",
-        category: "Nike",
-        price: 3500,
-        img: "./Off-White™ x Nike Air Jordan 2.jpg",
-      },
-      {
-        title: "Auralee x New Balance 550",
-        category: "New Balance",
-        price: 3090,
-        img: "./Auralee x New Balance 550.jpg",
-      },
-      {
-        title: "YEEZY Foam Runner",
-        category: "Adidas",
-        price: 4000,
-        img: "./adidas YEEZY Foam Runner.jpg",
-      },
-      {
-        title: "Kiko Kostadinov ASICS GEL-Quantum Levitrack",
-        category: "Asics",
-        price: 1200,
-        img: "./Kiko Kostadinov ASICS GEL-Quantum Levitrack.jpg",
-      },
-      {
-        title: "Patta x Nike Air Max 1",
-        category: "Nike",
-        price: 2589,
-        img: "./Patta x Nike Air Max 1.jpg",
-      },
-      {
-        title: "A Ma Maniere x Nike Air Jordan 3.",
-        category: "Nike",
-        price: 10000,
-        img: "./A Ma Maniere x Nike Air Jordan 3.jpg",
-      },
-    ];
+    {
+    title: "Off-White™ x Nike Air Jordan 3",
+    category: "Nike",
+    price: 3500,
+    img: "https://i.postimg.cc/RVwWvkmR/A-Ma-Maniere-x-Nike-Air-Jordan-3.jpg",
+  },
+  {
+    title: "Auralee x New Balance 550",
+    category: "New Balance",
+    price:3090 ,
+    img: "https://i.postimg.cc/m2Wrpm9F/Auralee-x-New-Balance-550.jpg",
+  },
+  {
+    title: "YEEZY Foam Runner",
+    category: "Adidas",
+    price: 4000,
+    img: "https://i.postimg.cc/3RNS2j1L/adidas-YEEZY-Foam-Runner.jpg",
+  },
+  {
+    title: "Kiko Kostadinov ASICS GEL-Quantum Levitrack",
+    category: "Asics",
+    price: 1200,
+    img: "https://i.postimg.cc/XNfGwr1W/Kiko-Kostadinov-ASICS-GEL-Quantum-Levitrack.jpg",
+  },
+  {
+    title: "Patta x Nike Air Max 1",
+    category: "Nike",
+    price: 2589,
+    img: "https://i.postimg.cc/Prz8WCxZ/Patta-x-Nike-Air-Max-1.jpg",
+  },
+  {
+    title: "A Ma Maniere x Nike Air Jordan 2.",
+    category: "Nike",
+    price: 10000,
+    img: "https://i.postimg.cc/CKTnGw49/Off-White-x-Nike-Air-Jordan-2.jpg ",
+  },
+  ];
 
 let cart = JSON.parse(localStorage.getItem("cart"))
   ? JSON.parse(localStorage.getItem("cart"))

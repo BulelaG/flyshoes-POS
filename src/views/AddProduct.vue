@@ -1,50 +1,74 @@
 <template>
-  <form @submit.prevent="login" class="form new-border">
-    <h2 class="form-heading">Login</h2>
+
+<!-- CODE for hiding this if not -->
+
+
+  <form @submit.prevent="register" class="form new-border">
+    <h2 class="form-heading">Add Product</h2>
+
+
     <input
       class="form-input new-border-inset"
-      type="email"
-      v-model="email"
-      placeholder="Email"
+      type="text"
+      v-model="img"
+      placeholder="Image url"
+      required
     />
+    
     <input
       class="form-input new-border-inset"
-      type="password"
-      v-model="password"
-      placeholder="Password"
+      type="text"
+      v-model="name"
+      placeholder="Name"
+      required
     />
-    <button type="submit" class="form-btn neu-border">Sign in</button>
+  
+    <input
+      class="form-input new-border-inset"
+      type="price"
+      v-model="price"
+      placeholder="price"
+      required
+    />
+   
+    <button type="submit" class="form-btn new-border">Add Product</button>
     <!-- <div class="form-social-login">
-      <button class="form-btn neu-border form-social-btn">
+      <button class="form-btn new-border form-social-btn">
         <i class="fab fa-google"></i>
       </button>
-      <button class="form-btn neu-border form-social-btn">
+      <button class="form-btn new-border form-social-btn">
         <i class="fab fa-facebook-f"></i>
       </button>
     </div> -->
 
-    <p>
-      Not a member?
-      <router-link :to="{ name: 'Sign' }">Create an account</router-link>
-    </p>
+    <!-- <p>
+      Already a member?
+      <router-link :to="{ name: 'Login' }">Sign in</router-link>
+    </p> -->
   </form>
 </template>
-
-
 <script>
 export default {
+
+// POST products HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
   data() {
     return {
+      name: "",
       email: "",
+      contact: "",
       password: "",
     };
   },
   methods: {
-    login() {
-      fetch("https://arden-first-backend.herokuapp.com/users", {
-        method: "PATCH",
+    register() {
+      fetch("https://generic-blog-api.herokuapp.com/users", {
+        method: "POST",
         body: JSON.stringify({
+          name: this.name,
           email: this.email,
+          contact: this.contact,
           password: this.password,
         }),
         headers: {
@@ -53,9 +77,9 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
+          alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          alert("User logged in");
-          this.$router.push({ name: "Blogs" });
+          this.$router.push({ name: "Products" });
         })
         .catch((err) => {
           alert(err);
@@ -63,9 +87,7 @@ export default {
     },
   },
 };
-
 </script>
-
 <style>
 .new-border {
   border-radius: 30px;
@@ -74,49 +96,46 @@ export default {
 }
 .new-border-inset {
   border-radius: 30px;
-  background: #e7e2e2;
+  background: #f5f5f5;
   box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
 }
-
 .form {
+  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   padding: 40px;
   gap: 20px;
   width: 100%;
-  margin-inline: auto;
   max-width: 600px;
+  margin-inline: auto;
 }
-
 .form-heading {
   text-align: center;
   text-transform: uppercase;
 }
-
 .form-input,
 .form-btn {
   border: none;
   outline: none;
   padding: 20px;
 }
-
 .form-btn {
   cursor: pointer;
   transition: all 0.1s linear;
 }
-
 .form-btn:hover {
   transform: scale(1.05);
 }
-
 .form-social-login {
   display: flex;
   justify-content: space-between;
 }
-
 .form-social-btn {
   width: 45%;
-  color: #333;
+  color: rgb(255, 190, 190);
+  
 }
+
+
 </style>

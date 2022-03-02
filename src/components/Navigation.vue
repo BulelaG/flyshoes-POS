@@ -1,7 +1,7 @@
 <template>
 <!-- 1st nav -->
 
-   <header class="p-3 bg-dark text-white">
+   <header class="p-3 bg-secondary text-white">
     <div class="container">
       <div class="home+logo"></div>
       <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
@@ -10,18 +10,33 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li style="padding-right:10px;">
-              <router-link   to="/products" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
-                Products
-              </router-link>
-            </li>
-            <li style="padding-right:10px;">
+
+  <li style="padding-right:10px;">
               <router-link   to="/" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
                 Home
               </router-link>
             </li>
+
+            <li style="padding-right:10px;">
+              <router-link    to="/products" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href=""/></svg>
+                Products
+              </router-link>
+            </li>
+
+            <li style="padding-right:10px;">
+              <router-link  id="mylinks"  to="/users" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href=""/></svg>
+                Users
+              </router-link>
+            </li>
+
+           
+
+
+
+          
             
             <li text-start>
               <router-link style="padding-right:00px;font-size: 2rem; " to="/" class="nav-link text-start text-warning">
@@ -46,6 +61,7 @@
 
         <div class="text-end">
          <div class="text-end">
+             <router-link to="/add-product">  <button type="button" class="btn btn-light text-dark me-2"> Add Product </button> </router-link>
          <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
          <router-link to="/sign-up"> <button type="button" class="btn btn-warning">Sign-up</button> </router-link>
         </div>
