@@ -61,7 +61,9 @@
               <div class="card-body">
                 <br />
                 <h5 class="card-title">{{ product.title }}</h5>
+                <em><p class="card-text">{{ product.description }}</p></em>
                 <p class="card-text">{{ product.category }}</p>
+
               </div>
               <div class="card-footer">
                 <br>

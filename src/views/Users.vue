@@ -25,7 +25,7 @@
               </div>
               <div class="card-footer">
                 <br>
-                <small class="text-muted">R{{ user.role }}</small>
+                <small class="text-muted">{{ user.role }}</small>
               </div>
               
               <br>
@@ -52,15 +52,15 @@ export default {
     return {
       users: [
         {
-        img: "https://i.postimg.cc/RVwWvkmR/A-Ma-Maniere-x-Nike-Air-Jordan-3.jpg",
-        name: "Nike",
-        role: "3500",
+        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
+        name: "John Don",
+        role: "Store Manager",
       },
-       {
-        img: "https://i.postimg.cc/RVwWvkmR/A-Ma-Maniere-x-Nike-Air-Jordan-3.jpg",
-        name: "Nike",
-        role: "3500",
-      }
+      //  {
+      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
+      //   name: "Jane Doe",
+      //   role: "Cashier",
+      // }
 
        
       ],

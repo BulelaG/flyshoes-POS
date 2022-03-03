@@ -6,20 +6,35 @@
   <form @submit.prevent="register" class="form new-border">
     <h2 class="form-heading">Add Product</h2>
 
+   <input
+      class="form-input new-border-inset"
+      type="text"
+      v-model="title"
+      placeholder="Title"
+      required
+    />
+
+     <input
+      class="form-input new-border-inset"
+      type="text"
+      v-model="category"
+      placeholder="Category"
+      required
+    />
+
+     <input
+      class="form-input new-border-inset"
+      type="text"
+      v-model="description"
+      placeholder="Description"
+      required
+    />
 
     <input
       class="form-input new-border-inset"
       type="text"
       v-model="img"
       placeholder="Image url"
-      required
-    />
-    
-    <input
-      class="form-input new-border-inset"
-      type="text"
-      v-model="name"
-      placeholder="Name"
       required
     />
   
@@ -55,21 +70,25 @@ export default {
 
   data() {
     return {
-      name: "",
-      email: "",
-      contact: "",
-      password: "",
+      title: "",
+      category: "",
+      description: "",
+      img: "",
+      price: "",
+      
     };
   },
   methods: {
     register() {
-      fetch("https://generic-blog-api.herokuapp.com/users", {
+      fetch("https://generic-blog-api.herokuapp.com/products", {
         method: "POST",
         body: JSON.stringify({
-          name: this.name,
-          email: this.email,
-          contact: this.contact,
-          password: this.password,
+          title: this.title,
+          category: this.category,
+          description: this.description,
+          img: this.img,
+          price: this.price
+
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -77,7 +96,7 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          alert("User registered");
+          alert("Product added");
           localStorage.setItem("jwt", json.jwt);
           this.$router.push({ name: "Products" });
         })

@@ -4,8 +4,8 @@
     <input
       class="form-input neu-border-inset"
       type="text"
-      v-model="name"
-      placeholder="Name"
+      v-model="username"
+      placeholder="Username"
       required
     />
     <input
@@ -49,7 +49,7 @@
 export default {
   data() {
     return {
-      name: "",
+      username: "",
       email: "",
       contact: "",
       password: "",
@@ -57,10 +57,10 @@ export default {
   },
   methods: {
     register() {
-      fetch("https://arden-first-backend.herokuapp.com/users", {
+      fetch("https://arden-first-backend.herokuapp.com/users/register", {
         method: "POST",
         body: JSON.stringify({
-          name: this.name,
+          username: this.username,
           email: this.email,
           contact: this.contact,
           password: this.password,
@@ -73,7 +73,7 @@ export default {
         .then((json) => {
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "" });
+          this.$router.push({ name: "Users" });
         })
         .catch((err) => {
           alert(err);

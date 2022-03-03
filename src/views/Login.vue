@@ -3,9 +3,9 @@
     <h2 class="form-heading">Login</h2>
     <input
       class="form-input new-border-inset"
-      type="email"
-      v-model="email"
-      placeholder="Email"
+      type="username"
+      v-model="username"
+      placeholder="username"
     />
     <input
       class="form-input new-border-inset"
@@ -25,7 +25,7 @@
 
     <p>
       Not a member?
-      <router-link :to="{ name: 'Sign' }">Create an account</router-link>
+      <router-link :to="{ name: 'SignUp' }">Create an account</router-link>
     </p>
   </form>
 </template>
@@ -35,16 +35,16 @@
 export default {
   data() {
     return {
-      email: "",
+      username: "",
       password: "",
     };
   },
   methods: {
     login() {
-      fetch("https://arden-first-backend.herokuapp.com/users", {
+      fetch("https://full-proj.herokuapp.com/User", {
         method: "PATCH",
         body: JSON.stringify({
-          email: this.email,
+          username: this.username,
           password: this.password,
         }),
         headers: {
@@ -55,7 +55,7 @@ export default {
         .then((json) => {
           localStorage.setItem("jwt", json.jwt);
           alert("User logged in");
-          this.$router.push({ name: "Blogs" });
+          this.$router.push({ name: "Users" });
         })
         .catch((err) => {
           alert(err);

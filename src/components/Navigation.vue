@@ -20,14 +20,14 @@
 
             <li style="padding-right:10px;">
               <router-link    to="/products" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href=""/></svg>
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
                 Products
               </router-link>
             </li>
 
             <li style="padding-right:10px;">
               <router-link  id="mylinks"  to="/users" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href=""/></svg>
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
                 Users
               </router-link>
             </li>
