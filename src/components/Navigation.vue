@@ -26,15 +26,13 @@
             </li>
 
             <li style="padding-right:10px;">
-              <router-link  id="mylinks"  to="/users" class="nav-link text-white">
+              <router-link id="mylinks"  to="/users" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
                 Users
               </router-link>
             </li>
 
-           
-
-
+        
 
           
             

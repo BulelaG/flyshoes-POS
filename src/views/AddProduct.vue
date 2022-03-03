@@ -3,7 +3,7 @@
 <!-- CODE for hiding this if not -->
 
 
-  <form @submit.prevent="register" class="form new-border">
+  <form @submit.prevent="addProduct" class="form new-border">
     <h2 class="form-heading">Add Product</h2>
 
    <input
@@ -64,10 +64,7 @@
 </template>
 <script>
 export default {
-
-// POST products HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
+// POST products HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   data() {
     return {
       title: "",
@@ -79,8 +76,16 @@ export default {
     };
   },
   methods: {
-    register() {
-      fetch("https://generic-blog-api.herokuapp.com/products", {
+    addProduct() {
+
+       console.log(this.title, this.category, this.description, this.img,this.price
+);
+
+      if (!localStorage.getItem("jwt")) {
+        alert("User not logged in");
+        return this.$router.push({ name: "Login" });
+      }
+      fetch("https://arden-first-backend.herokuapp.com/products", {
         method: "POST",
         body: JSON.stringify({
           title: this.title,
@@ -92,6 +97,8 @@ export default {
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+
         },
       })
         .then((response) => response.json())

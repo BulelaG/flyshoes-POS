@@ -41,7 +41,9 @@ export default {
   },
   methods: {
     login() {
-      fetch("https://full-proj.herokuapp.com/User", {
+            console.log(this.username, this.password);
+
+      fetch("https://arden-first-backend.herokuapp.com/users", {
         method: "PATCH",
         body: JSON.stringify({
           username: this.username,
@@ -55,7 +57,7 @@ export default {
         .then((json) => {
           localStorage.setItem("jwt", json.jwt);
           alert("User logged in");
-          this.$router.push({ name: "Users" });
+          this.$router.push({ name: "users" });
         })
         .catch((err) => {
           alert(err);
