@@ -4,30 +4,30 @@
 
 
    <div>
-     <h1>PRODUCTS</h1>
+     <h1>Students</h1>
 
 <br>
 
     <section id="gallery" style="padding-bottom: 16px">
       <div class="container">
-        <div class="row" v-if="products">
+        <div class="row" v-if="students">
           <div
-            v-for="(product, index) of products"
+            v-for="(student, index) of students"
             :key="index"
             class="col-lg-4 mb-4"
           >
             <div class="card">
-              <img :src="product.img" alt="" class="card-img-top" />
+              <img :src="student.img" alt="" class="card-img-top" />
               <div class="card-body">
                 <br />
-                <h5 class="card-title">{{ product.title }}</h5>
-                <em><p class="card-text">{{ product.description }}</p></em>
-                <p class="card-text">{{ product.category }}</p>
+                <h5 class="card-title">{{ student.title }}</h5>
+                <em><p class="card-text">{{ student.description }}</p></em>
+                <p class="card-text">{{ student.category }}</p>
 
               </div>
               <div class="card-footer">
                 <br>
-                <small class="text-muted">R{{ product.price }}</small>
+                <small class="text-muted">R{{ student.price }}</small>
                 <br>
                 <h6></h6>
               </div>

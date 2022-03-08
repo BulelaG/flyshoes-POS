@@ -6,42 +6,73 @@
       <div class="home+logo"></div>
       <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-<img class="logo" style="border:1px solid; border-radius:10px; float:left;" height="50px" width="50px"    src="../assets/flyshoes.png">
+<img class="logo" style="border:1px solid; border-radius:10px; float:left;" height="50px" width="50px"    src="@/assets/MYLOGO.png">
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-  <li style="padding-right:10px;">
+  <li style="padding-right:3px;">
               <router-link   to="/" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
                 Home
               </router-link>
             </li>
 
-            <li style="padding-right:10px;">
-              <router-link    to="/products" class="nav-link text-white">
+              <li style="padding-right:3px;">
+              <router-link    to="/about" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
-                Products
+                About
               </router-link>
             </li>
 
-            <li style="padding-right:10px;">
-              <router-link id="mylinks"  to="/users" class="nav-link text-white">
+            <li style="padding-right:3px;">
+              <router-link    to="/products" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
-                Users
+                Students
               </router-link>
             </li>
+
+            <li style="padding-right:3px;">
+              <router-link id="mylinks"  to="/tutors" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
+               Tutors
+              </router-link>
+            </li>
+            
+             <li style="padding-right:3px;">
+              <router-link id="mylinks"  to="" class="nav-link text-white">
+                <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Subjects
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Mathematics</button>
+    <button class="dropdown-item" type="button">English HL</button>
+    <button class="dropdown-item" type="button">IsiXhosa HL</button>
+    <button class="dropdown-item" type="button">Afrikaans FAL</button>
+    <button class="dropdown-item" type="button">Physical Sciences</button>
+    <button class="dropdown-item" type="button">Life Sciences</button>
+        <button class="dropdown-item" type="button">Geography</button>
+            <button class="dropdown-item" type="button">History</button>
+
+
+  </div>
+</div>
+              </router-link>
+            </li>
+
+
 
         
 
           
-            
-            <li text-start>
+<!--             
+            <li text-start  style="padding-right:5px;">
               <router-link style="padding-right:00px;font-size: 2rem; " to="/" class="nav-link text-start text-warning">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#home"/></svg>
-                 <em> FLY SHOES </em>
+                 <em> T h u t o </em>
             </router-link>
-            </li>
+            </li> -->
  <!-- <li>
                 <router-link to="/about" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use xlink:href="#speedometer2"/></svg>
@@ -59,7 +90,7 @@
 
         <div class="text-end">
          <div class="text-end">
-             <router-link to="/add-product">  <button type="button" class="btn btn-light text-dark me-2"> Add Product </button> </router-link>
+             <router-link to="/become-a-tutor">  <button type="button" class="btn btn-success text-white me-2"> Become a tutor </button> </router-link>
          <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
          <router-link to="/sign-up"> <button type="button" class="btn btn-warning">Sign-up</button> </router-link>
         </div>

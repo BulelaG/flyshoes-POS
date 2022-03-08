@@ -3,30 +3,30 @@
 <!-- CODE for hiding this if not -->
 
 
-  <form @submit.prevent="addProduct" class="form new-border">
-    <h2 class="form-heading">Add Product</h2>
+  <form @submit.prevent="BecomeATutor" class="form new-border">
+    <h2 class="form-heading">Become a tutor</h2>
 
    <input
       class="form-input new-border-inset"
       type="text"
-      v-model="title"
-      placeholder="Title"
+      v-model="fullname"
+      placeholder="Fullname"
       required
     />
 
      <input
       class="form-input new-border-inset"
       type="text"
-      v-model="category"
-      placeholder="Category"
+      v-model="subject"
+      placeholder="Subject"
       required
     />
 
      <input
       class="form-input new-border-inset"
       type="text"
-      v-model="description"
-      placeholder="Description"
+      v-model="location"
+      placeholder="Location"
       required
     />
 
@@ -41,12 +41,12 @@
     <input
       class="form-input new-border-inset"
       type="price"
-      v-model="price"
-      placeholder="price"
+      v-model="rate"
+      placeholder="Rate"
       required
     />
    
-    <button type="submit" class="form-btn new-border">Add Product</button>
+    <button type="submit" class="form-btn new-border">Become a tutor</button>
     <!-- <div class="form-social-login">
       <button class="form-btn new-border form-social-btn">
         <i class="fab fa-google"></i>

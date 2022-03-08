@@ -20,9 +20,13 @@ export default {
 </script>
 
 <style>
-
+html{
+   background:rgb(230, 230, 230);
+ 
+}
 
 #app {
+  background:rgb(230, 230, 230);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
