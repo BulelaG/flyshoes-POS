@@ -133,28 +133,34 @@ export default {
         subject: "Maths",
         location: "Wynberg"
 
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Claremont"
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Belville"
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "English",
-        location: "Hout Bay"
-
       },
+      
+      // {
+      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
+      //   name: "John Don",
+      //   grades:"10-12",
+      //   subject: "Maths",
+      //   location: "Claremont"
+
+      // }, 
+      
+      // {
+      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
+      //   name: "John Don",
+      //   grades:"10-12",
+      //   subject: "Maths",
+      //   location: "Belville"
+
+      // },
+      
+      // {
+      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
+      //   name: "John Don",
+      //   grades:"10-12",
+      //   subject: "English",
+      //   location: "Hout Bay"
+
+      // },
      
        
       ],
